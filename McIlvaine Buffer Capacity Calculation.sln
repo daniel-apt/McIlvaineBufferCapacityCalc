@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McIlvaine Buffer Capacity Calculation", "McIlvaine Buffer Capacity Calculation\McIlvaine Buffer Capacity Calculation.csproj", "{727F18F1-2CE9-405D-8296-43F4DC746DD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{727F18F1-2CE9-405D-8296-43F4DC746DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727F18F1-2CE9-405D-8296-43F4DC746DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727F18F1-2CE9-405D-8296-43F4DC746DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727F18F1-2CE9-405D-8296-43F4DC746DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF4D9535-54EB-49BB-8BDE-39909C09CB4B}
+	EndGlobalSection
+EndGlobal
