@@ -1,6 +1,9 @@
 # McIlvaine Buffer Capacity Calculation
 Program for calculating the Capcity of a McIlvaine buffer for a known pH and molarity
 
+**Installation:**
+Windows binaries are included in the "releases" section
+
 **Usage:**
 McIlvaineBufferCapacityCalc_winx64.exe <pH> <citric acid concentration [mol/l]> <disodium phosphate concentration [mol/l]>
 
