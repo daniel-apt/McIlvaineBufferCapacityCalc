@@ -1,5 +1,5 @@
 # McIlvaine Buffer Capacity Calculation
-Program for calculating the Capacity of a McIlvaine buffer for a known pH and molarity
+Program for calculating the capacity of a McIlvaine buffer for a known pH and molarity
 
 **Installation:**
 Windows binaries are included in the "releases" section
