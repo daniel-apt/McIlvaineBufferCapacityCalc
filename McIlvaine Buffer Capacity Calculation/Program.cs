@@ -1,4 +1,4 @@
-﻿// ======================================================
+// ======================================================
 // Program for calculating McIlvaine Buffer capacity
 // Author: Daniel A.G.
 // 2025 | Leibniz Institute for Polymer Research Dresden
@@ -39,31 +39,26 @@ class Program
 
 
 
-        var nfi = new NumberFormatInfo()
-        {
-            NumberDecimalSeparator = ".",                               // use dot as decimal, regardless of System settings
-            NumberDecimalDigits = 4                                     // this doesn't work :(
-        };
 
         Console.WriteLine("================================= RESULT =================================");
         Console.WriteLine("Source:  https://doi.org/10.18540/jcecvl6iss3pp0387-0396");
         Console.WriteLine();
         Console.WriteLine("Input:");
-        Console.WriteLine($"\tpH:                           {pH.ToString(nfi)}");
-        Console.WriteLine($"\tCitric Acid conc.:            {citr_conc.ToString(nfi)} mol/l");
-        Console.WriteLine($"\tDisodium Phosphate conc.:     {phos_conc.ToString(nfi)} mol/l");
+        Console.WriteLine($"\tpH:                           {pH.ToString("F2", CultureInfo.InvariantCulture)}");
+        Console.WriteLine($"\tCitric Acid conc.:            {citr_conc.ToString("F4", CultureInfo.InvariantCulture)} mol/l");
+        Console.WriteLine($"\tDisodium Phosphate conc.:     {phos_conc.ToString("F4", CultureInfo.InvariantCulture)} mol/l");
         Console.WriteLine();
         Console.WriteLine("Effective Charge (Source:  https://www.sciencedirect.com/topics/engineering/effective-charge):");
-        Console.WriteLine($"\tCitric Acid:                  {bufferData.qeff_citr.ToString(nfi)}");
-        Console.WriteLine($"\tDisodium Phosphate:           {bufferData.qeff_phos.ToString(nfi)}");
+        Console.WriteLine($"\tCitric Acid:                  {bufferData.qeff_citr.ToString("F2", CultureInfo.InvariantCulture)}");
+        Console.WriteLine($"\tDisodium Phosphate:           {bufferData.qeff_phos.ToString("F2", CultureInfo.InvariantCulture)}");
         Console.WriteLine();
-        Console.WriteLine($"Water contribution:             {bufferData.wat.ToString(nfi)} mol/l");
-        Console.WriteLine($"Citric Acid contribution:       {bufferData.citr_contrib.ToString(nfi)} mol/l");
-        Console.WriteLine($"Phosphoric Acid contribution:   {bufferData.phos_contrib.ToString(nfi)} mol/l");
+        Console.WriteLine($"Water contribution:             {bufferData.wat.ToString("F4", CultureInfo.InvariantCulture)} mol/l");
+        Console.WriteLine($"Citric Acid contribution:       {bufferData.citr_contrib.ToString("F4", CultureInfo.InvariantCulture)} mol/l");
+        Console.WriteLine($"Phosphoric Acid contribution:   {bufferData.phos_contrib.ToString("F4", CultureInfo.InvariantCulture)} mol/l");
         Console.WriteLine("--------------------------------------------------------------------------");
-        Console.WriteLine($"Buffer Function:                {bufferData.tau.ToString(nfi)} mol/l");
+        Console.WriteLine($"Buffer Function:                {bufferData.tau.ToString("F4", CultureInfo.InvariantCulture)} mol/l");
         Console.WriteLine();
-        Console.WriteLine($"Kolthoff's buffer capacity:     {ChemCalc.calc_KolthoffBufferCap(pH,citr_conc,phos_conc).ToString(nfi)} mol/l");
+        Console.WriteLine($"Kolthoff's buffer capacity:     {ChemCalc.calc_KolthoffBufferCap(pH,citr_conc,phos_conc).ToString("F4", CultureInfo.InvariantCulture)} mol/l");
         Console.WriteLine("==========================================================================");
     }
     public static void TauGraph()                                           // Test function to obtain the Buffering Function as highlighted in: BUFFERING FUNCTION: A GENERAL APPROACH FOR BUFFER BEHAVIOR, A.F.OLIVEIRA, 2020, doi: 10.18540/jcecvl6iss3pp0387-0396
